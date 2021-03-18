@@ -1,12 +1,19 @@
 ﻿using System;
+using System.Collections;
 
 namespace ConsoleApp1
 {
-    class Program
+
+    public class Program
     {
-        static void Main(string[] args)
+        private static Dumpster _dumpster;
+
+        public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            _dumpster = new Dumpster();
+            _dumpster.Dispose(new Bottle(), new Bottle(), new Food(), new Trash());
         }
+
+
     }
 }
